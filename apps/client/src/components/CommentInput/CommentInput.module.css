@@ -1,0 +1,39 @@
+.CommentInput {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.CommentInputContent {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(66, 126, 248);
+  resize: vertical;
+}
+
+.CommentInputContent:focus {
+  border: 2px solid rgb(66, 126, 248);
+  outline: none;
+}
+
+.CommentInputButton {
+  margin-top: 0.5rem;
+  margin-left: 10px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 5px;
+  background-color: rgb(66, 126, 248);
+  color: black;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+}
+
+.CommentInputButton:hover {
+  background-color: rgb(39, 104, 233);
+  cursor: pointer;
+  box-shadow: inset;
+}

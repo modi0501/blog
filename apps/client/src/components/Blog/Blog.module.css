@@ -1,0 +1,112 @@
+.Blog {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, 0%);
+  margin: auto;
+  width: 90%;
+  border: 1px solid  white;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(28, 31, 38);
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: white;
+}
+
+.BlogTitle {
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: white;
+  background-color: rgb(37, 39, 44);
+  border: 1px solid white;
+  border-left: 5px solid rgb(66, 126, 248);
+  border-right: 5px solid rgb(66, 126, 248);
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.BlogAuthor, .BlogDate {
+  font-family: 'PT Sans Narrow', sans-serif;
+  word-spacing: 5px;
+  letter-spacing: 1.5px;
+  font-size: 20px;
+  margin: 0;
+  padding: 5px;
+  color: white;
+}
+
+.BlogContent {
+  text-indent: 3.5rem;
+  font-size: 23px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 100;
+  background-color: rgb(37, 39, 44);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  word-spacing: 5px;
+  letter-spacing: 1.5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: white;
+}
+
+.BlogCommentHeading {
+  font-size: 2rem;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.BlogLikesHeading {
+  font-size: 2rem;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin: 0
+}
+
+.BlogLoading {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.BlogLikeButton {
+  margin-top: 0.5rem;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  /* padding: 10px; */
+  border: 0px;
+  border-radius: 5px;
+  background-color: rgb(254, 254, 255);
+  color: black;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+}
+
+.BlogRemoveLikeButton {
+  margin-top: 0.5rem;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  /* padding: 10px; */
+  border: 0px;
+  border-radius: 5px;
+  background-color: rgb(66, 126, 248);
+  color: black;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+}
+
+.BlogLikeSVG {
+  height: 2rem;
+  width: 2rem;
+  padding: 2px;
+}
+
+.BlogLikeButton:hover, .BlogRemoveLikeButton:hover {
+  cursor: pointer;
+}

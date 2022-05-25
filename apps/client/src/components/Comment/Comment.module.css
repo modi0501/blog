@@ -1,0 +1,102 @@
+.Comment {
+  font-size: 25px;
+  font-family: "PT Sans Narrow", sans-serif;
+  background-color: rgb(28, 31, 38);
+  border: 1px solid rgb(135, 142, 158);
+  border-radius: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  border-left: 3px solid rgb(66, 126, 248);
+  margin: 0;
+}
+
+.Comment:hover {
+  border-left: 4px solid rgb(66, 126, 248);
+}
+
+.CommentUserDate {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.CommentUser {
+  font-size: 20px;
+  margin: 0;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.CommentDate {
+  font-size: 20px;
+  margin: 0;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.CommentViewReplies {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  margin-left: 1rem;
+  color: rgb(135, 142, 158);
+  font-weight: 0;
+}
+
+.CommentViewReplies:hover {
+  cursor: pointer;
+  color: white;
+  background: transparent;
+}
+
+.Reply {
+  margin-left: 2rem;
+}
+
+.CommentText {
+  font-size: 25px;
+  margin: 0;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.CommentReplyInput {
+  width: 85%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #535353;
+  margin-right: 5px;
+}
+
+.CommentShowReply {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.CommentReplyButton {
+  margin-top: 0;
+  padding: 10px;
+  border: 0px;
+  border-radius: 5px;
+  background-color: rgb(66, 126, 248);
+  color: black;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+}
+
+.CommentReplyButton:hover {
+  background-color: rgb(39, 104, 233);
+  cursor: pointer;
+  box-shadow: inset;
+}
+
+@media only screen and (max-width: 676px) {
+  .CommentShowReply {
+    display: flex;
+    flex-direction: column;
+  }
+}

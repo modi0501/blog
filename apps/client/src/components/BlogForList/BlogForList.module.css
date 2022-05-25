@@ -1,0 +1,52 @@
+.BlogForList {
+  border: 1px solid rgb(135, 142, 158);
+  border-radius: 5px;
+  margin: 10px 10px 10px 10px;
+  padding: 0 10px 10px;
+  background-color: rgb(28, 31, 38);
+  font-family: "PT Sans Narrow", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+.BlogForList:hover {
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.BlogForListTitle {
+  font-size: 2rem;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 16px;
+  letter-spacing: 0.1rem;
+  color: rgb(255, 255, 255);
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+}
+
+.BlogForListAuthor {
+  font-size: 1rem;
+  margin-top: 0;
+  color: rgb(135, 142, 158);
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.BlogForListContent {
+  font-size: 1rem;
+  word-wrap: break-word;
+  display: inline;
+  color: rgb(135, 142, 158);
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.BlogForListDate {
+  font-size: 1rem;
+  margin-top: 0;
+  color: rgb(135, 142, 158);
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.BlogForListReadMore {
+  display: inline;
+  font-size: 1rem;
+  color: rgb(66, 126, 248);
+}

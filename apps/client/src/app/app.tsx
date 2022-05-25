@@ -1,27 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { Message } from '@blog/api-interfaces';
+import "./app.module.css";
+import { Route, Routes } from "react-router-dom";
+import React from "react";
+import Home from "../components/Home/Home";
+import CreateBlog from "../components/CreateBlog/CreateBlog";
+import Blog from "../components/Blog/Blog";
+import Signup from "../components/Signup/Signup";
+import Signin from "../components/Signin/Signin";
+import { isLoggedIn } from "../utils/auth";
 
-export const App = () => {
-  const [m, setMessage] = useState<Message>({ message: '' });
-
-  useEffect(() => {
-    fetch('/api')
-      .then((r) => r.json())
-      .then(setMessage);
-  }, []);
-
+const App = () => {
   return (
-    <>
-      <div style={{ textAlign: 'center' }}>
-        <h1>Welcome to client!</h1>
-        <img
-          width="450"
-          src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-          alt="Nx - Smart, Fast and Extensible Build System"
-        />
-      </div>
-      <div>{m.message}</div>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="create" element={<CreateBlog />} />
+      <Route path="blog/:id" element={<Blog />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/signin" element={<Signin />} />
+    </Routes>
   );
 };
 

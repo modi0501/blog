@@ -1,0 +1,66 @@
+.SigninForm {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+  margin: auto;
+  width: 50%;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(28, 31, 38);
+  text-align: center;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+@media only screen and (max-width: 676px) {
+  .SigninForm {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, 0%);
+    width: 90%;
+    height: 100%;
+  }
+}
+
+.SigninFormField {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #535353;
+}
+
+.SigninFormField:focus {
+  outline: none;
+  border: 2px solid rgb(66, 126, 248);
+}
+
+.SigninForm p {
+  font-size: 2.5rem;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+.SigninFormButton {
+  margin-top: 0.5rem;
+  margin-left: 10px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 5px;
+  background-color: rgb(66, 126, 248);
+  color: black;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+}
+
+.SigninFormButton {
+  background-color: rgb(39, 104, 233);
+  cursor: pointer;
+  box-shadow: inset;
+}

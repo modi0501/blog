@@ -1,1 +1,8 @@
-/* Your styles goes here. */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=PT+Sans+Narrow:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
+html {
+  background-color: rgb(15, 17, 22);
+  font-family: "PT Sans Narrow", sans-serif;
+}

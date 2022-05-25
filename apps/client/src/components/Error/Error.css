@@ -1,0 +1,16 @@
+.error {
+  background-color: rgb(199, 69, 69);
+  border-radius:5px;
+  /* display: inline; */
+}
+
+.error-message {
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+  /* font-weight: 700; */
+  word-wrap: break-word;
+  text-align: center;
+  /* display: inline; */
+  /* background-color:rgb(199, 69, 69) ; */
+}

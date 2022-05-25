@@ -14,7 +14,18 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "regenerator-runtime": "0.13.7",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+
+    "apollo-resolvers": "^1.4.2",
+    "apollo-server-express": "^2.21.2",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.0",
+    "graphql": "^15.5.0",
+    "graphql-import-node": "0.0.4",
+    "graphql-upload": "^13.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.2.6"
   },
   "devDependencies": {
     "@nrwl/cli": "14.1.9",
@@ -50,6 +61,24 @@
     "react-test-renderer": "18.1.0",
     "ts-jest": "27.1.4",
     "ts-node": "9.1.1",
-    "typescript": "~4.6.2"
+    "typescript": "~4.6.2",
+    "@apollo/react-hooks": "^4.0.0",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/user-event": "^13.5.0",
+    "apollo-boost": "^0.4.9",
+    "apollo-link-ws": "^1.0.20",
+    "react-router-dom": "^6.2.2",
+    "graphql": "^15.8.0",
+    "graphql-ws": "^5.6.3",
+    "jwt-decode": "^3.1.2",
+    "web-vitals": "^2.1.4",
+
+    "@graphql-codegen/cli": "1.21.3",
+    "@graphql-codegen/typescript": "1.21.1",
+    "@graphql-codegen/typescript-resolvers": "1.19.0",
+    "@types/bcrypt": "^5.0.0",
+    "@types/lodash": "^4.14.168",
+    "graphql-tools": "^7.0.4",
+    "nodemon": "^2.0.7"
   }
 }

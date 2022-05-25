@@ -1,0 +1,18 @@
+.BlogListArray {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.BlogListError,
+.BlogListLoading {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+@media only screen and (max-width: 676px) {
+  .BlogListArray {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}
