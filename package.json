@@ -23,6 +23,7 @@
     "graphql": "^15.5.0",
     "graphql-import-node": "0.0.4",
     "graphql-upload": "^13.0.0",
+    "graphql-tools": "^7.0.4",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
     "mongoose": "^6.2.6"
