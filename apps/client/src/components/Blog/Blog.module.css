@@ -110,3 +110,26 @@
 .BlogLikeButton:hover, .BlogRemoveLikeButton:hover {
   cursor: pointer;
 }
+
+@media only screen and (max-width: 676px) {
+  .BlogContent {
+    font-size: 1rem;
+  }
+
+  .BlogAuthor, .BlogDate {
+    font-size: 1rem;
+  }
+
+  .BlogTitle {
+    font-size: 2rem;
+  }
+
+  .BlogCommentHeading, .BlogLikesHeading {
+    font-size: 1.2rem;
+  }
+
+  .BlogLikeSVG {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}

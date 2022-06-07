@@ -99,4 +99,16 @@
     display: flex;
     flex-direction: column;
   }
+
+  .CommentDate, .CommentUser {
+    font-size: 1rem;
+  }
+
+  .CommentText {
+    font-size: 1.3rem;
+  }
+
+  .CommentViewReplies {
+    font-size: 10px;
+  }
 }
