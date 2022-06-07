@@ -1,31 +1,32 @@
-import { useState } from "react";
-import SearchSVG from "../../search.svg";
-import styles from "./Search.module.css";
+import { useState } from 'react';
+import SearchSVG from '../../search.svg';
+import styles from './Search.module.css';
 
 export const Search = (props) => {
-  const [searchOption, setSearchOption] = useState("");
+  const [searchOption, setSearchOption] = useState('');
   const onSearchQueryChangeHandler = props.onSearchQueryChangeHandler;
   return (
     <div className={styles.HomeHeadingSearchSection}>
-      <img src={SearchSVG} className={styles.SearchSVG} />
-      <input
-        type="search"
-        className={styles.HomeHeadingSearch}
-        // onChange={(e) => setSearchQuery(e.target.value)}
-        onChange={(e) =>
-          onSearchQueryChangeHandler({
-            key: e.target.value,
-            option: searchOption,
-          })
-        }
-        onKeyDown={(e) =>
-          onSearchQueryChangeHandler({
-            key: e.target.value,
-            option: searchOption,
-          })
-        }
-        placeholder="Type something to search"
-      />
+      <div className={styles.HomeHeadingSearchInput}>
+        <img src={SearchSVG} className={styles.SearchSVG} />
+        <input
+          type="search"
+          className={styles.HomeHeadingSearch}
+          onChange={(e) =>
+            onSearchQueryChangeHandler({
+              key: e.target.value,
+              option: searchOption,
+            })
+          }
+          onKeyDown={(e) =>
+            onSearchQueryChangeHandler({
+              key: e.target.value,
+              option: searchOption,
+            })
+          }
+          placeholder="Type something to search"
+        />
+      </div>
       {/* <br /> */}
       <div className={styles.HomeHeadingSearchSectionOptions}>
         <p>Search By:</p>
@@ -35,9 +36,9 @@ export const Search = (props) => {
             value="title"
             id="title"
             onChange={() => {
-              setSearchOption("title");
+              setSearchOption('title');
             }}
-            checked={searchOption === "title"}
+            checked={searchOption === 'title'}
           />
           <label for="title">Title</label>
         </div>
@@ -47,9 +48,9 @@ export const Search = (props) => {
             value="author"
             id="author"
             onChange={() => {
-              setSearchOption("author");
+              setSearchOption('author');
             }}
-            checked={searchOption === "author"}
+            checked={searchOption === 'author'}
           />
           <label for="author">Author</label>
         </div>
@@ -59,9 +60,9 @@ export const Search = (props) => {
             value="content"
             id="content"
             onChange={() => {
-              setSearchOption("content");
+              setSearchOption('content');
             }}
-            checked={searchOption === "content"}
+            checked={searchOption === 'content'}
           />
           <label for="content">Content</label>
         </div>
@@ -71,9 +72,9 @@ export const Search = (props) => {
             value="global"
             id="global"
             onChange={() => {
-              setSearchOption("");
+              setSearchOption('');
             }}
-            checked={searchOption === ""}
+            checked={searchOption === ''}
           />
           <label for="global">Global Search</label>
         </div>

@@ -45,12 +45,19 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border: 3px solid rgb(108, 151, 238);
-  width: 50%;
+  width: 100%;
 }
 
 .HomeHeadingSearch:focus {
   outline: none;
   border: 3px solid rgb(66, 126, 248);
+}
+
+.HomeHeadingSearchInput {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content:space-around;
 }
 
 label {
@@ -74,13 +81,30 @@ label {
   }
 
   .HomeHeadingSearchSection {
-    /* align-items: left;
-    margin-right: 10px; */
     flex-direction: column;
   }
 
   .HomeHeadingSearchSectionOptions {
     display: flex;
     flex-direction: column;
+  }
+
+  .HomeHeadingSearchInput {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+  }
+
+  .HomeHeadingSearch {
+    width: auto;
+  }
+
+  .HomeHeadingSearchSectionOptions {
+    padding-top: 1rem;
+  }
+
+  .inputDiv {
+    padding: 2.5px;
   }
 }
