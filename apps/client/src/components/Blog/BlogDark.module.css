@@ -47,8 +47,8 @@
   padding: 10px;
   word-spacing: 5px;
   letter-spacing: 1.5px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  white-space: pre-line;
+  word-break: break-all;
   color: white;
 }
 

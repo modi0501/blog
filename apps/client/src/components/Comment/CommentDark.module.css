@@ -70,7 +70,7 @@
 
 .CommentShowReply {
   display: flex;
-  justify-content: left;
+  justify-content: space-around;
   align-items: flex-start;
 }
 
@@ -95,10 +95,6 @@
 }
 
 @media only screen and (max-width: 676px) {
-  .CommentShowReply {
-    display: flex;
-    flex-direction: column;
-  }
 
   .CommentDate, .CommentUser {
     font-size: 1rem;
