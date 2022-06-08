@@ -1,14 +1,13 @@
 .Comment {
   font-size: 25px;
   font-family: "PT Sans Narrow", sans-serif;
-  background-color: #f5f9fd;
+  background-color: rgb(28, 31, 38);
   border: 1px solid rgb(135, 142, 158);
   border-radius: 10px;
   padding: 10px;
   word-wrap: break-word;
   border-left: 3px solid rgb(66, 126, 248);
   margin: 0;
-  color: black;
 }
 
 .Comment:hover {
@@ -20,21 +19,18 @@
   justify-content: space-between;
   align-items: flex-start;
   font-family: "PT Sans Narrow", sans-serif;
-  color: black;
 }
 
 .CommentUser {
   font-size: 20px;
   margin: 0;
   font-family: "PT Sans Narrow", sans-serif;
-  color: black;
 }
 
 .CommentDate {
   font-size: 20px;
   margin: 0;
   font-family: "PT Sans Narrow", sans-serif;
-  color: black;
 }
 
 .CommentViewReplies {
@@ -43,13 +39,13 @@
   margin: 0;
   border: 0;
   margin-left: 1rem;
-  color: #7d838a;
+  color: rgb(135, 142, 158);
   font-weight: 0;
 }
 
 .CommentViewReplies:hover {
   cursor: pointer;
-  color: #707377;
+  color: white;
   background: transparent;
 }
 
@@ -72,11 +68,6 @@
   margin-right: 5px;
 }
 
-.CommentReplyInput:focus {
-  outline: none;
-  border: 2px solid rgb(66, 126, 248);
-}
-
 .CommentShowReply {
   display: flex;
   justify-content: left;
@@ -89,7 +80,7 @@
   border: 0px;
   border-radius: 5px;
   background-color: rgb(66, 126, 248);
-  color: white;
+  color: black;
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: 600;
   font-size: 1rem;

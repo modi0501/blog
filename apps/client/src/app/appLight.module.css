@@ -1,0 +1,10 @@
+.theme {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+html {
+  background-color: #ffffff;
+  font-family: "PT Sans Narrow", sans-serif;
+}

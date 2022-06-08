@@ -1,10 +1,14 @@
 import { useState } from 'react';
+import { LIGHT_THEME } from '../../constants';
 import SearchSVG from '../../search.svg';
-import styles from './Search.module.css';
+import stylesLight from './Search.module.css';
+import stylesDark from './SearchDark.module.css';
 
 export const Search = (props) => {
   const [searchOption, setSearchOption] = useState('');
   const onSearchQueryChangeHandler = props.onSearchQueryChangeHandler;
+  const localTheme = localStorage.getItem(LIGHT_THEME);
+  const styles = (localTheme === 'false') ? stylesDark : stylesLight;
   return (
     <div className={styles.HomeHeadingSearchSection}>
       <div className={styles.HomeHeadingSearchInput}>
@@ -40,7 +44,7 @@ export const Search = (props) => {
             }}
             checked={searchOption === 'title'}
           />
-          <label for="title">Title</label>
+          <label className={styles.label} for="title">Title</label>
         </div>
         <div className={styles.inputDiv}>
           <input
@@ -52,7 +56,7 @@ export const Search = (props) => {
             }}
             checked={searchOption === 'author'}
           />
-          <label for="author">Author</label>
+          <label className={styles.label} for="author">Author</label>
         </div>
         <div className={styles.inputDiv}>
           <input
@@ -64,7 +68,7 @@ export const Search = (props) => {
             }}
             checked={searchOption === 'content'}
           />
-          <label for="content">Content</label>
+          <label className={styles.label} for="content">Content</label>
         </div>
         <div className={styles.inputDiv}>
           <input
@@ -76,7 +80,7 @@ export const Search = (props) => {
             }}
             checked={searchOption === ''}
           />
-          <label for="global">Global Search</label>
+          <label className={styles.label} for="global">Global Search</label>
         </div>
       </div>
     </div>

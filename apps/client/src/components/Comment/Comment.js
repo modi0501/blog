@@ -1,13 +1,16 @@
 import { useLazyQuery, useMutation } from "@apollo/react-hooks";
-import { AUTH_TOKEN } from "../../constants";
+import { AUTH_TOKEN, LIGHT_THEME } from "../../constants";
 import { useState } from "react";
-import styles from "./Comment.module.css";
+import stylesLight from "./Comment.module.css";
+import stylesDark from "./CommentDark.module.css";
 import { ADD_REPLY, COMMENT_BY_ID, DELETE_COMMENT } from "./graphql";
 
 const Comment = (props) => {
   const [showReplies, setShowReplies] = useState(false);
   const [showReplyInput, setShowReplyInput] = useState(false);
   const [replyText, setReplyText] = useState("");
+  const localTheme = localStorage.getItem(LIGHT_THEME);
+  const styles = (localTheme === 'false') ? stylesDark : stylesLight;
   let [replies, setReplies] = useState([]);
   const [getCommentById, { loadingReply, errorReply, dataReply }] =
     useLazyQuery(COMMENT_BY_ID);

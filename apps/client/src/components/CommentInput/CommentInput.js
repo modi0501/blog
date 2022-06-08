@@ -1,9 +1,13 @@
 import { useState } from "react";
-import styles from "./CommentInput.module.css";
+import { LIGHT_THEME } from "../../constants";
+import stylesLight from "./CommentInput.module.css";
+import stylesDark from "./CommentInputDark.module.css";
 
 const CommentInput = (props) => {
   const [text, setText] = useState("");
   const onSubmitHandler = props.onSubmitHandler;
+  const localTheme = localStorage.getItem(LIGHT_THEME);
+  const styles = (localTheme === 'false') ? stylesDark : stylesLight;
   return (
     <div className={styles.CommentInput}>
       <textarea

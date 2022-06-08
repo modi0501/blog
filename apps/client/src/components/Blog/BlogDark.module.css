@@ -1,24 +1,14 @@
-.wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: auto;
-  background: white;
-}
-
 .Blog {
-  /* position: absolute; */
-  /* left: 50%;
-  top: 5%; */
-  transform: translate(0%, 15px);
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, 0%);
   margin: auto;
   width: 90%;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid  white;
   border-radius: 10px;
   padding: 10px;
-  background-color: #f5f9fd;
+  background-color: rgb(28, 31, 38);
   font-family: 'PT Sans Narrow', sans-serif;
   color: white;
 }
@@ -27,25 +17,23 @@
   font-size: 3rem;
   text-align: center;
   font-family: 'PT Sans Narrow', sans-serif;
-  color: black;
-  background-color: #f5f9fd;
-  border: 1px solid black;
+  color: white;
+  background-color: rgb(37, 39, 44);
+  border: 1px solid white;
   border-left: 5px solid rgb(66, 126, 248);
   border-right: 5px solid rgb(66, 126, 248);
   border-radius: 10px;
   font-weight: 600;
 }
 
-.BlogAuthor,
-.BlogDate {
+.BlogAuthor, .BlogDate {
   font-family: 'PT Sans Narrow', sans-serif;
   word-spacing: 5px;
   letter-spacing: 1.5px;
   font-size: 20px;
   margin: 0;
   padding: 5px;
-  color: #7d838a;
-  font-weight: bold;
+  color: white;
 }
 
 .BlogContent {
@@ -53,7 +41,7 @@
   font-size: 23px;
   font-family: 'PT Sans Narrow', sans-serif;
   font-weight: 100;
-  /* background-color: #e2e7ec; */
+  background-color: rgb(37, 39, 44);
   border: 1px solid white;
   border-radius: 10px;
   padding: 10px;
@@ -61,11 +49,10 @@
   letter-spacing: 1.5px;
   white-space: pre-wrap;
   word-wrap: break-word;
-  color: black;
+  color: white;
 }
 
 .BlogCommentHeading {
-  color: black;
   font-size: 2rem;
   font-family: 'PT Sans Narrow', sans-serif;
 }
@@ -73,14 +60,13 @@
 .BlogLikesHeading {
   font-size: 2rem;
   font-family: 'PT Sans Narrow', sans-serif;
-  margin: 0;
-  color: black;
+  margin: 0
 }
 
 .BlogLoading {
   font-size: 2rem;
+  color: rgb(255, 255, 255);
   text-align: center;
-  color: black;
 }
 
 .BlogLikeButton {
@@ -90,10 +76,9 @@
   /* padding: 10px; */
   border: 0px;
   border-radius: 5px;
-  border-color: black;
   background-color: rgb(254, 254, 255);
   color: black;
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 1.5px;
@@ -109,7 +94,7 @@
   border-radius: 5px;
   background-color: rgb(66, 126, 248);
   color: black;
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 1.5px;
@@ -122,8 +107,7 @@
   padding: 2px;
 }
 
-.BlogLikeButton:hover,
-.BlogRemoveLikeButton:hover {
+.BlogLikeButton:hover, .BlogRemoveLikeButton:hover {
   cursor: pointer;
 }
 
@@ -132,8 +116,7 @@
     font-size: 1rem;
   }
 
-  .BlogAuthor,
-  .BlogDate {
+  .BlogAuthor, .BlogDate {
     font-size: 1rem;
   }
 
@@ -141,8 +124,7 @@
     font-size: 2rem;
   }
 
-  .BlogCommentHeading,
-  .BlogLikesHeading {
+  .BlogCommentHeading, .BlogLikesHeading {
     font-size: 1.2rem;
   }
 

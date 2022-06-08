@@ -1,42 +1,30 @@
-.wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: auto;
-  background: white;
-}
-
-.SigninForm {
+.SignupForm {
   position: absolute;
   left: 50%;
   top: 30%;
   transform: translate(-50%, -30%);
   margin: auto;
   width: 50%;
-  border: 2px solid black;
+  border: 1px solid white;
   border-radius: 10px;
   padding: 10px;
-  background-color: #f5f9fd;
-  color: black;
+  background-color: rgb(28, 31, 38);
   text-align: center;
   font-family: "PT Sans Narrow", sans-serif;
 }
 
 @media only screen and (max-width: 676px) {
-  .SigninForm {
+  .SignupForm {
     position: absolute;
     left: 50%;
     top: 0%;
     transform: translate(-50%, 0%);
     width: 90%;
     height: 100%;
-    margin-top: 5px;
   }
 }
 
-.SigninFormField {
+.SignupFormField {
   width: 90%;
   padding: 10px;
   margin-bottom: 15px;
@@ -44,19 +32,19 @@
   border: 1px solid #535353;
 }
 
-.SigninFormField:focus {
+.SignupFormField:focus {
   outline: none;
   border: 2px solid rgb(66, 126, 248);
 }
 
-.SigninForm p {
+.SignupForm p {
   font-size: 2.5rem;
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: 600;
-  color: black;
+  color: white;
 }
 
-.SigninFormButton {
+.SignupFormButton {
   margin-top: 0.5rem;
   margin-left: 10px;
   padding: 10px;
@@ -71,9 +59,8 @@
   text-decoration: none;
 }
 
-.SigninFormButton {
+.SignupFormButton {
   background-color: rgb(39, 104, 233);
   cursor: pointer;
   box-shadow: inset;
-  color: white;
 }

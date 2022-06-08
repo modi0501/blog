@@ -1,18 +1,3 @@
-.wrapper {
-  padding-bottom: 100%;
-  background: white;
-}
-
-.wrapperBlog {
-  position: relative;
-  left: 0;
-  bottom: 0;
-  padding-bottom: 20%;
-  right: 0;
-  overflow: auto;
-  background: white;
-}
-
 .BlogListArray {
   display: grid;
   grid-template-columns: 33% 33% 33%;
@@ -21,7 +6,7 @@
 .BlogListError,
 .BlogListLoading {
   font-size: 2rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 

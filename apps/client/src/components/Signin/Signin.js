@@ -1,8 +1,9 @@
 import { useMutation } from "@apollo/react-hooks";
 import { useEffect, useState } from "react";
 import Error from "../Error/Error";
-import { AUTH_TOKEN, USER_EMAIL, USER_NAME } from "../../constants";
-import styles from "./Signin.module.css";
+import { AUTH_TOKEN, LIGHT_THEME, USER_EMAIL, USER_NAME } from "../../constants";
+import stylesLight from "./Signin.module.css";
+import stylesDark from "./SigninDark.module.css";
 import { useNavigate } from "react-router-dom";
 import { SIGNIN } from "./graphql";
 
@@ -11,6 +12,8 @@ const Signin = () => {
     email: "",
     password: "",
   });
+  const localTheme = localStorage.getItem(LIGHT_THEME);
+  const styles = (localTheme === 'false') ? stylesDark : stylesLight;
   const navigate = useNavigate();
   useEffect(() => {
     if (localStorage.getItem(AUTH_TOKEN)) navigate("/");
@@ -28,7 +31,7 @@ const Signin = () => {
     },
   });
   return (
-    <div>
+    <div className={styles.wrapper}>
       <form
         onSubmit={(e) => {
           e.preventDefault();

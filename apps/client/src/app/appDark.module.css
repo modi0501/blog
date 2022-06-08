@@ -1,0 +1,10 @@
+.theme {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(15, 17, 22);
+}
+
+html {
+  background-color: rgb(15, 17, 22);
+  font-family: "PT Sans Narrow", sans-serif;
+}

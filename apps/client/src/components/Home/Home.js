@@ -1,15 +1,18 @@
-import styles from "./Home.module.css";
-import BlogList from "../BlogList/BlogList";
-import React, { useEffect, useState } from "react";
-import { AUTH_TOKEN } from "../../constants";
-import { Link } from "react-router-dom";
-import { Search } from "../Search/Search";
-import DownSVG from "../../down.svg";
+import stylesLight from './Home.module.css';
+import stylesDark from './HomeDark.module.css';
+import BlogList from '../BlogList/BlogList';
+import React, { useContext, useEffect, useState } from 'react';
+import { AUTH_TOKEN, LIGHT_THEME, USER_EMAIL, USER_NAME } from '../../constants';
+import { Link } from 'react-router-dom';
+import { Search } from '../Search/Search';
+import DownSVG from '../../down.svg';
+import DownDarkSVG from '../../downDark.svg';
 
-const Home = () => {
+const Home = (props) => {
+  const [themeChanged, setThemeChanged] = useState(false);
   const [isAuthorised, setIsAuthorised] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [searchOption, setSearchOption] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchOption, setSearchOption] = useState('');
   const [showSearch, setShowSearch] = useState(false);
   useEffect(() => {
     const token = localStorage.getItem(AUTH_TOKEN);
@@ -17,8 +20,14 @@ const Home = () => {
       setIsAuthorised(true);
     }
   });
+  console.log('========Theme======');
+  console.log(props.isLightTheme);
+
+  const styles = props.isLightTheme ? stylesLight : stylesDark;
   const logout = () => {
-    localStorage.clear();
+    localStorage.removeItem(AUTH_TOKEN);
+    localStorage.removeItem(USER_EMAIL);
+    localStorage.removeItem(USER_NAME);
     setIsAuthorised(false);
   };
   const onSearchQueryChangeHandler = (query) => {
@@ -52,8 +61,27 @@ const Home = () => {
             onClick={() => setShowSearch((prev) => !prev)}
           >
             Search
-            <img src={DownSVG} className={styles.DownSVG} placeholder="Like" />
+            <img
+              src={props.isLightTheme ? DownSVG : DownDarkSVG}
+              className={styles.DownSVG}
+              placeholder="Like"
+            />
           </button>
+          <button
+            onClick={() => {
+              localStorage.setItem(
+                LIGHT_THEME,
+                localStorage.getItem(LIGHT_THEME) === 'false'
+              );
+              console.log(localStorage);
+              setThemeChanged((prevState) => !prevState);
+              props.setIsThemeChanged((prevState) => !prevState);
+            }}
+            className={styles.HomeButton}
+          >
+            {props.isLightTheme ? 'Dark Mode' : 'Light Mode'}
+          </button>
+
           {isAuthorised === true && (
             <div className={styles.authorised}>
               <button onClick={logout} className={styles.HomeButton}>

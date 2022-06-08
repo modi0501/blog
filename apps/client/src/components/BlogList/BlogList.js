@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useQuery } from "@apollo/react-hooks";
 import BlogForList from "../BlogForList/BlogForList";
-import styles from "./BlogList.module.css";
+import stylesLight from "./BlogList.module.css";
+import stylesDark from "./BlogListDark.module.css";
 import { BLOG_LIST } from "./graphql";
 import Error from "../Error/Error";
+import { LIGHT_THEME } from "../../constants";
 
 const BlogList = (props) => {
   const { loading, error, data } = useQuery(BLOG_LIST);
   const searchQuery = props.searchQuery;
   const searchOption = props.searchOption;
+  const localTheme = localStorage.getItem(LIGHT_THEME);
+  const styles = (localTheme === 'false') ? stylesDark : stylesLight;
 
-  if (loading) return <p className={styles.BlogListLoading}>Loading...</p>;
+  if (loading) return <div className={styles.wrapper}><p className={styles.BlogListLoading}>Loading...</p></div>;
   if (error) return <Error message={error.message} />;
 
   let blogArray;
@@ -35,7 +39,7 @@ const BlogList = (props) => {
       </div>
     );
   });
-  return <div className={styles.BlogListArray}>{blogArray}</div>;
+  return <div className={styles.wrapperBlog}><div className={styles.BlogListArray}>{blogArray}</div></div>;
 };
 
 export default BlogList;

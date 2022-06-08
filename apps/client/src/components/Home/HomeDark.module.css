@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: rgb(15, 17, 22);
   padding: 0 2rem;
 }
 
@@ -22,10 +22,10 @@
 .HomeHeadingText {
   font-size: 3rem;
   font-weight: 700;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-weight: 700;
   text-decoration: underline double 4px rgb(66, 126, 248);
-  /* text-shadow: 0 0 3px rgb(66, 126, 248); */
+  text-shadow: 0 0 7px rgb(66, 126, 248);
 }
 
 .HomeHeadingSearchSection {
@@ -64,7 +64,7 @@
   border: 0px;
   border-radius: 5px;
   background-color: rgb(66, 126, 248);
-  color: white;
+  color: black;
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -94,7 +94,6 @@
   /* padding: 2px; */
   margin: 0;
   margin-left: 5px;
-  color: #fafafa;
   /* margin-right: 5px; */
 
 }

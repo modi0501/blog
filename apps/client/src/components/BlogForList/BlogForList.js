@@ -1,10 +1,15 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import styles from "./BlogForList.module.css";
+import { LIGHT_THEME } from "../../constants";
+import stylesLight from "./BlogForList.module.css";
+import stylesDark from "./BlogForListDark.module.css";
 
 const BlogForList = (props) => {
   const { title, author, createdOn, content } = props.blog;
   const index = props.index;
   const id = props.blog._id;
+  const localTheme = localStorage.getItem(LIGHT_THEME);
+  const styles = (localTheme === 'false') ? stylesDark : stylesLight;
 
   return (
     <div key={index} className={styles.BlogForList}>
